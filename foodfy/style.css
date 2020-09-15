@@ -190,14 +190,14 @@ footer p{
     border-radius: 16px;
 }
 
-.modal-img{
+.modal-img img{
     border-radius: 15px;
     margin: 30px 30px 20px;
     width: 600px;
     height: 200px;
-    background-image: url(/assets/asinhas.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    
+    object-fit: cover;    
+    
 }
 
 .modal-title{
