@@ -1,0 +1,78 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<title>Cursos</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="wrapper">        
+    <h1>Conteúdos</h1>        
+</div>
+
+<section class="cards">
+    <div class="card" id="starter">
+        <div class="card__image-container">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Logo do Curso Starter">
+        </div>
+        <div class="card__content">
+            <p>Starter</p>
+        </div>
+        <div class="card__info">
+            <p>5 módulos</p>
+            <p class="card__price">Gratuito</p>
+        </div>
+    </div>
+
+    <div class="card" id="dashboard/launchbase">
+        <div class="card__image-container">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="Logo do Curso Launchbase">
+        </div>
+        <div class="card__content">
+            <p>Launchbase</p>
+        </div>
+        <div class="card__info">
+            <p>7 módulos</p>
+            <p class="card__price">Pago</p>
+        </div>
+    </div>
+
+    <div class="card" id="bonus/launchbase">
+        <div class="card__image-container">
+            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="Logo do Curso GoStack">
+        </div>
+        <div class="card__content">
+            <p>GoStack</p>
+        </div>
+        <div class="card__info">
+            <p>9 módulos</p>
+            <p class="card__price">Pago</p>
+        </div>
+    </div>
+
+</section>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <a class="close-modal">
+            <i class="material-icons">close</i>
+        </a>
+        <a class="max-modal">
+            <i class="material-icons">maximize</i>
+        </a>
+        <div class="modal-content">
+            <iframe src="https://app.rocketseat.com.br/starter" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+{% endblock %}
