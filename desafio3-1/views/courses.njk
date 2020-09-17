@@ -18,44 +18,20 @@ rel="stylesheet">
 </div>
 
 <section class="cards">
-    <div class="card" id="starter">
+    {%for item in items%}
+    <div class="card" id="{{item.id}}">
         <div class="card__image-container">
-            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/starter.svg" alt="Logo do Curso Starter">
+            <img src="{{item.img_url}}" alt="Logo do Curso {{item.title}}">
         </div>
         <div class="card__content">
-            <p>Starter</p>
+            <p>{{item.title}}</p>
         </div>
         <div class="card__info">
-            <p>5 módulos</p>
-            <p class="card__price">Gratuito</p>
+            <p>{{item.duration}}</p>
+            <p class="card__price">{{item.price}}</p>
         </div>
     </div>
-
-    <div class="card" id="dashboard/launchbase">
-        <div class="card__image-container">
-            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/launchbase.svg" alt="Logo do Curso Launchbase">
-        </div>
-        <div class="card__content">
-            <p>Launchbase</p>
-        </div>
-        <div class="card__info">
-            <p>7 módulos</p>
-            <p class="card__price">Pago</p>
-        </div>
-    </div>
-
-    <div class="card" id="bonus/launchbase">
-        <div class="card__image-container">
-            <img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/gostack.svg" alt="Logo do Curso GoStack">
-        </div>
-        <div class="card__content">
-            <p>GoStack</p>
-        </div>
-        <div class="card__info">
-            <p>9 módulos</p>
-            <p class="card__price">Pago</p>
-        </div>
-    </div>
+    {%endfor%}
 
 </section>
 
