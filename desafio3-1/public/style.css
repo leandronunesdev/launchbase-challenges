@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+a{
+    color: black;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: darkgrey;
@@ -80,7 +84,11 @@ header a{
 
 .card{
     background-color: grey;
-    border-radius: 20px;
+    border-radius: 20px;    
+}
+
+.link-card{
+    cursor: pointer;
 }
 
 .card__image-container{
@@ -169,3 +177,23 @@ iframe{
     height: 90%;    
 }
 
+/*===COURSE PAGE===*/
+
+.course{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.course .card__image-container{
+    padding: 30px;
+    margin: 30px;
+}
+
+.card__info-newgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
