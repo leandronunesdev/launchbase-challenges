@@ -5,20 +5,9 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="banner">
-    <div class="text">
-        <h1>As melhores receitas</h1>
-        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro</p>
-    </div>
-    <div class="chef">
-        <img src="/assets/chef.png" alt="Chef">
-    </div>
-</div>
-<div class="title">
-    <h1>Mais acessadas</h1>
-</div>
+    
 <div class="cards">
+
     {% for item in items %}
     <div class="card" id="">
         <div class="card-img">
@@ -30,6 +19,7 @@
         </div>
     </div> 
     {% endfor %}   
+
 </div>
 
-{% endblock %}
+{% endblock %}}
