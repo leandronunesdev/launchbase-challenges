@@ -21,10 +21,10 @@ server.get("/recipes", function(req, res){
     return res.render("recipes", {items: recipes})
 })
 
-server.get("/recipes/:index", function (req, res) {    
+/*server.get("/recipes/:index", function (req, res) {    
     const recipeIndex = req.params.index;
 
-    return res.render("recipe")  
+    return res.render("recipe", {items: recipes})  
     console.log(recipes[recipeIndex])
   
     /*const recipe = recipes.find(function(recipe){
@@ -37,8 +37,18 @@ server.get("/recipes/:index", function (req, res) {
         return res.send("Recipe not found!")
     }
 
-    return res.render("recipe", {item: recipe})*/
-  })
+    return res.render("recipe", {item: recipe})
+  })*/
+
+server.get("/recipes/:index", function (req, res) {    
+    const recipeIndex = req.params.index;
+
+    if (!recipes[recipeIndex]) {
+        return res.render('not-found')
+    }
+
+    return res.render("recipe", {item: recipes[recipeIndex]})
+})
 
 server.get("/about", function(req, res){
     return res.render("about")

@@ -6,19 +6,35 @@
 
 {% block content %}
     
-<div class="cards">
+<div class="cards recipe">
 
-    {% for item in items %}
-    <div class="card" id="">
-        <div class="card-img">
+    
+    <div class="recipe-img" id="">
+        <div class="">
             <img src="{{item.image}}" alt="Imagem de {{item.title}}">
         </div>
         <div class="card-text">
             <h1>{{item.title}}</h1>
-            <p>{{item.author}}</p>
+            <h2>por {{item.author}}</h2>
+        </div>
+        <div class="recipe-text">
+            <h3>Ingredientes</h3>            
+            <ul class="ingredients">
+            {% for ingredient in item.ingredients %}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+            </ul>            
+            <h3>Modo de preparo</h3>            
+            <ul>
+            {% for step in item.preparation %}
+                <li>{{step}}</li>
+            {% endfor %}
+            </ul>   
+            <h3>Informações adicionais</h3>            
+            <p>{{item.information}}</p>           
         </div>
     </div> 
-    {% endfor %}   
+     
 
 </div>
 

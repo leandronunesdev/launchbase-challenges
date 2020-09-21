@@ -224,6 +224,45 @@ footer p{
     cursor: pointer;
 }
 
+/*==RECIPE PAGE==*/
 
+.recipe-img img{
+    border-radius: 15px;
+    margin: 0 auto 50px;    
+}
 
+.recipe h1{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 4px;
+}
 
+.recipe h2{
+    text-align: center;
+    font-size: 20px;
+    color: #777777;
+    margin-bottom: 50px;
+}
+
+.recipe h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe ul{
+    margin-bottom: 39px;
+}
+
+.recipe li, p{
+    font-size: 18px;
+    line-height: 28px;   
+}
+
+.ingredients li::before{
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: black; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: 0; /* Also needed for space (tweak if needed) */
+}
