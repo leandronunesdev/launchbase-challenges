@@ -1,14 +1,12 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Foodfy - Receitas</title>
+    <title>Foodfy - Receita</title>    
 {% endblock %}
 
 {% block content %}
     
 <div class="cards recipe">
-
-    
     <div class="recipe-img" id="">
         <div class="">
             <img src="{{item.image}}" alt="Imagem de {{item.title}}">
@@ -18,24 +16,30 @@
             <h2>por {{item.author}}</h2>
         </div>
         <div class="recipe-text">
-            <h3>Ingredientes</h3>            
-            <ul class="ingredients">
+            <div class="title-button">
+                 <h3>Ingredientes</h3><button onclick="hideShow()" id="hide-button">Esconder</button>                       
+            </div>
+            <ul class="ingredients" id="hide-show">
             {% for ingredient in item.ingredients %}
                 <li>{{ingredient}}</li>
             {% endfor %}
-            </ul>            
-            <h3>Modo de preparo</h3>            
-            <ul>
+            </ul>  
+            <div class="title-button">
+                <h3>Modo de preparo</h3><button onclick="hideShow2()" id="hide-button2">Esconder</button>            
+            </div>          
+            <ul id="hide-show2">
             {% for step in item.preparation %}
                 <li>{{step}}</li>
             {% endfor %}
-            </ul>   
-            <h3>Informações adicionais</h3>            
-            <p>{{item.information}}</p>           
+            </ul>
+            <div class="title-button">
+                <h3>Informações adicionais</h3><button onclick="hideShow3()" id="hide-button3">Esconder</button>
+            </div>   
+            <p id="hide-show3">{{item.information}}</p>           
         </div>
-    </div> 
-     
-
+    </div>
 </div>
+
+<script src="/scripts.js"></script>
 
 {% endblock %}}

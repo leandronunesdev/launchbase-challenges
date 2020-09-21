@@ -6,7 +6,7 @@
 
 {% block content %}
     
-<div class="cards">
+<div class="cards">   
 
     {% for item in items %}
     <div class="card" id="">
@@ -21,21 +21,6 @@
     {% endfor %}   
 
 </div>
-
-<div class="modal-overlay">
-    <div class="modal">
-        <div class="modal-img" id="bg-img">
-            <img src="/assets/asinhas.png" alt="">           
-        </div>
-        <div class="modal-text">
-            <p class="modal-title"></p>
-            <p class="author">por Vania Steroski</p>
-            <p class="close-modal">Fechar modal</p>
-        </div>           
-    </div>
-</div>
-
-
-<script src="scripts.js"></script>
+<script src="/scripts.js"></script>
 
 {% endblock %}}
