@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Roberto Doggos",
+      "birth": 633830400000,
+      "education_level": "high_school",
+      "modality": "classroom",
+      "subjects": "Português",
+      "created_at": 1601332558039
+    }
+  ]
+}

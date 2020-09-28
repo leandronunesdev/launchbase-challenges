@@ -1,0 +1,71 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<form class="card" method="post" action="/teachers">
+    <section 
+    class="avatar" 
+    style="background: url(https://source.unsplash.com/collection/11461009/500x500) no-repeat center center / cover" ></section>
+    <section class="details">
+        
+        <h3>Novo professor</h3>
+        
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input 
+                    type="url" 
+                    name="avatar_url"
+                    placeholder="http://">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Professor</div>
+            <div>
+                <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Nome do Professor">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de nascimento</div>
+            <div>
+                <input 
+                    type="date" 
+                    name="birth">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Grau de escolaridade</div>
+            <select name="education_level">
+                <option value="high_school" selected>Ensino Médio Completo</option>
+                <option value="college">Ensino Superior Completo</option>
+                <option value="masters">Mestrado</option>
+                <option value="doctorate">Doutorado</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <div>Tipo de aula</div>
+            <div>
+                <span><input type="radio" name="modality" value="classroom" checked>Presencial</span>
+                <span><input type="radio" name="modality" value="distance">À distância</span>
+
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Matérias</div>
+            <div>
+                <input type="text" name="subjects" placeholder="Separe as matérias lecionadas por vírgula">
+            </div>
+        </div>
+
+        <button type="submit">Salvar</button>
+
+    </section>
+</form>
+{% endblock content %}
