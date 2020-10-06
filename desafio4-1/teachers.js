@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require("./data.json")
-const {education} = require("./utils")
+const {education, age} = require("./utils")
 
 exports.show = function(req, res){
     const {id} = req.params
@@ -9,11 +9,11 @@ exports.show = function(req, res){
         return teacher.id == id
     })
 
-    if (!foundTeacher) return res.send("Teacher not found!")
+    if (!foundTeacher) return res.send("Teacher not found!")    
 
     const teacher = {
         ...foundTeacher,
-        age: "",
+        age: age(foundTeacher.birth),
         education_level: education(foundTeacher.education_level),
         subjects: foundTeacher.subjects.split(","),
         created_at: "",
