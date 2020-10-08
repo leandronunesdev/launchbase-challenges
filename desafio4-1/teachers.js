@@ -53,3 +53,15 @@ exports.post = function(req, res){
         return res.redirect("/teachers")
     })
 }
+
+exports.edit = function (req, res){
+    const {id} = req.params
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return teacher.id == id
+    })
+
+    if (!foundTeacher) return res.send("Teacher not found!")
+
+    return res.render('teachers/edit', {teacher : foundTeacher})
+}
