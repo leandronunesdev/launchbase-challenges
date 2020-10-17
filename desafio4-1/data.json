@@ -1,16 +1,6 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/11461009/500x500",
-      "name": "Roberto Doggos",
-      "birth": 633830400000,
-      "education_level": "masters",
-      "modality": "distance",
-      "subjects": "Português, Inglês",
-      "created_at": 1601332558039
-    },
-    {
       "id": 2,
       "avatar_url": "https://source.unsplash.com/collection/11461009/500x500",
       "name": "Rubens Macedo",
