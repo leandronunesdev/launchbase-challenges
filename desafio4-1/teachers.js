@@ -3,6 +3,10 @@ const data = require("./data.json")
 const {education, age, date} = require("./utils")
 const Intl = require('intl')
 
+exports.index = function(req, res){
+    return res.render("teachers/index", {teachers: data.teachers} )
+}
+
 exports.show = function(req, res){
     const {id} = req.params
 
