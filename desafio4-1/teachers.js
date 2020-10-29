@@ -3,9 +3,19 @@ const data = require("./data.json")
 const {education, age, date} = require("./utils")
 const Intl = require('intl')
 
-exports.index = function(req, res){  
+exports.index = function(req, res){
     
-    return res.render("teachers/index", {teachers: data.teachers} )
+    const teachers = []
+
+    for (let teacher of data.teachers){
+        const teacher_subject = {
+            ...teacher,
+            subjects: teacher.subjects.split(",")
+        }
+        teachers.push(teacher_subject)
+    }
+    
+    return res.render("teachers/index", {teachers} )
 }
 
 exports.show = function(req, res){

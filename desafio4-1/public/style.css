@@ -240,7 +240,7 @@ td:last-child{
     text-align: center;
 }
 
-/*.subject{
+.subject{
     padding: 8px 16px;
     background-color: var(--secondary-color);
     border-radius: 16px;
