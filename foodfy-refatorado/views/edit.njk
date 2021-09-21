@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Cadastrar nova receita</title>
+{% endblock %}
+
+{% block content %}
+
+    <form method="POST" action="/admin/recipes?_method=PUT">
+        <h1>Editar receita</h1>
+
+        {% include 'fields.njk' %}
+
+        <input type="hidden" name="id" value={{recipe.id}}>
+
+    </form>
+
+    <form action="/admin/recipes?_method=DELETE" method="post">
+        <input type="hidden" name="id" value={{recipe.id}}>
+        <button type="submit" class="delete">Deletar</button>
+    </form>
+
+
+<script src="/scripts.js"></script>
+    
+{% endblock %}
