@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foodfy - Cadastrar nova receita</title>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST" action="/admin/recipes">
+<input type="url" name="image" value="" placeholder="https://">
+<input type="text" name="title" value="" placeholder="Título">
+<input type="text" name="author" value="" placeholder="Autor">
+
+<div id="ingredients">
+  <h3>Ingredientes</h3>
+    <div class="ingredient">
+      <input type="text" name="ingredients[]" value="" placeholder="Ingredient" />
+    </div>
+  </div>
+<button type="button" class="add-ingredient">Adicionar ingrediente</button>
+
+<div id="steps">
+  <h3>Preparação</h3>
+    <div class="step">
+      <input type="text" name="preparation[]" value="" placeholder="Passo" />
+    </div>
+  </div>
+<button type="button" class="add-step">Adicionar passo</button>
+<input type="text" name="information" value="" placeholder="Informação">
+
+<div>
+<button type="submit" class="">Salvar</button>
+
+</div>
+
+</form>
+
+
+<script src="/scripts.js"></script>
+    
+{% endblock %}
