@@ -6,6 +6,23 @@
 
 {% block content %}
 
+<div class="cards">   
+
+    {% for recipe in recipes %}
+    <div class="card" id="">
+        <div class="card-img">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
+        </div>
+        <div class="card-text">
+            <h1>{{recipe.title}}</h1>
+            <p>por {{recipe.author}}</p>
+            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+        </div>
+    </div> 
+    {% endfor %}   
+
+</div>
+
     <div class="about-text">
         <h1>Admin</h1>
         <a href="/admin/recipes/create">Nova receita</a>

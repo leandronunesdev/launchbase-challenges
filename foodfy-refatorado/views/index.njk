@@ -19,16 +19,18 @@
     <h1>Mais acessadas</h1>
 </div>
 <div class="cards">
-    {% for item in items %}
+    {% for recipe in recipes %}
+    <a href="/recipes/{{recipe.id}}">
     <div class="card" id="">
         <div class="card-img">
-            <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}">
         </div>
         <div class="card-text">
-            <h1>{{item.title}}</h1>
-            <p>por {{item.author}}</p>
+            <h1>{{recipe.title}}</h1>
+            <p>por {{recipe.author}}</p>
         </div>
     </div> 
+    </a>
     {% endfor %}   
 </div>
 

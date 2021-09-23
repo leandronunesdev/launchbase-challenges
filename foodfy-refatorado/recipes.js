@@ -1,6 +1,30 @@
 const fs = require('fs');
 const data = require('./data.json');
 
+exports.home = function (req, res) {
+  return res.render('index', { recipes: data.recipes });
+};
+
+exports.list = function (req, res) {
+  return res.render('recipes', { recipes: data.recipes });
+};
+
+exports.detail = function (req, res) {
+  const { id } = req.params;
+
+  const foundRecipe = data.recipes.find(function (recipe) {
+    return recipe.id == id;
+  });
+
+  if (!foundRecipe) return res.send('Recipe not found');
+
+  return res.render('recipe', { recipe: foundRecipe });
+};
+
+exports.index = function (req, res) {
+  return res.render('admin', { recipes: data.recipes });
+};
+
 //show
 exports.show = function (req, res) {
   const { id } = req.params;
