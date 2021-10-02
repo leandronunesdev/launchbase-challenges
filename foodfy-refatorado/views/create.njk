@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "layout-admin.njk" %}
 
 {% block head %}
     <title>Foodfy - Cadastrar nova receita</title>
@@ -6,34 +6,21 @@
 
 {% block content %}
 
+<div class="form">
+
 <form method="POST" action="/admin/recipes">
-<input type="url" name="image" value="" placeholder="https://">
-<input type="text" name="title" value="" placeholder="Título">
-<input type="text" name="author" value="" placeholder="Autor">
 
-<div id="ingredients">
-  <h3>Ingredientes</h3>
-    <div class="ingredient">
-      <input type="text" name="ingredients[]" value="" placeholder="Ingredient" />
-    </div>
+  {% include 'fields-create.njk' %}
+
+  <div>
+    <button type="submit" class="edit">Salvar receita</button>
   </div>
-<button type="button" class="add-ingredient">Adicionar ingrediente</button>
 
-<div id="steps">
-  <h3>Preparação</h3>
-    <div class="step">
-      <input type="text" name="preparation[]" value="" placeholder="Passo" />
-    </div>
-  </div>
-<button type="button" class="add-step">Adicionar passo</button>
-<input type="text" name="information" value="" placeholder="Informação">
 
-<div>
-<button type="submit" class="">Salvar</button>
-
-</div>
 
 </form>
+
+</div>
 
 
 <script src="/scripts.js"></script>

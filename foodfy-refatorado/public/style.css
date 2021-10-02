@@ -261,7 +261,16 @@ p {
 }
 
 .ingredients li::before {
-  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  content: '-'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: black; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: 0; /* Also needed for space (tweak if needed) */
+}
+
+.steps li::before {
+  content: '-'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: black; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
@@ -285,18 +294,137 @@ p {
   cursor: pointer;
 }
 
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.edit-header h1 {
+  font-size: 24px;
+}
+
+.edit-header a,
+button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .edit {
-  background-color: yellow;
+  background-color: #6558c3;
   padding: 10px 25px;
-  border-radius: 10px;
-  border: black 1px solid;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .delete {
-  background-color: red;
+  background-color: #dc4747;
   padding: 10px 25px;
-  border-radius: 10px;
-  border: black 1px solid;
+  border-radius: 4px;
   cursor: pointer;
+  margin-top: 24px;
+}
+
+.recipe-info {
+  margin-bottom: 40px;
+}
+
+input {
+  font-size: 18px;
+  line-height: 28px;
+  width: 100%;
+  height: fit-content;
+  border: #dddddd 1px solid;
+  margin: 8px 0;
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+
+.additional-info {
+  min-height: 250px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.add-button {
+  background-color: #fff;
+  color: #6558c3;
+  padding: 0;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* LAYOUT ADMIN */
+
+.header-admin {
+  background-color: black;
+  margin-bottom: 50px;
+}
+
+.header-admin a {
+  color: #fff;
+}
+
+.cards-admin {
+  width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-admin {
+  display: flex;
+}
+
+.card-img-admin {
+  width: 172px;
+  height: 80px;
+  border-radius: 9px;
+  align-content: center;
+  margin-right: 20px;
+}
+
+.card-img-admin img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  margin: 0 0 20px 0;
+}
+
+.card-admin h1 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 0 5px 0;
+}
+
+.card-admin p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.card-admin a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: #6558c3;
+}
+
+.card-text h2 {
+  font-weight: normal;
+}
+
+.recipe-info,
+li {
+  color: #444444;
 }
