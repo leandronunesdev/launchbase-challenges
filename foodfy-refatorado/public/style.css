@@ -428,3 +428,9 @@ input {
 li {
   color: #444444;
 }
+
+/* CHEFS */
+
+.chef_avatar img {
+  width: 100px;
+}
